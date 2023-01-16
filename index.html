@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EPUB to PDF Converter</title>
+    <style>
+        /* some css styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 50px;
+        }
+        form {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input[type="file"] {
+            margin: 20px 0;
+            padding: 12px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+        }
+        select {
+            margin: 20px 0;
+            padding: 12px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        button {
+            margin: 20px 0;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #0066c0;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0052a5;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>EPUB to PDF Converter</h1>
+    <form>
+        <input type="file" id="epub-file" accept=".epub">
+        <select id="output-format">
+            <option value="pdf">PDF</option>
+            <option value="mobi">MOBI</option>
+            <option value="epub">EPUB</option>
+        </select>
+        <button id="convert-button" onclick="convertEpubToFormat()">Convert</button>
+    </form>
+
+    <script>
+        function convertEpubToFormat() {
+          // Get the selected EPUB file
+          var epubFile = document.getElementById("epub-file").files[0];
+          // Get the selected output format
+          var outputFormat = document.getElementById("output-format").value;
+
+          // Use a library like js-epub to convert the EPUB file to the selected format
+          // Then download the generated file
+          if(outputFormat === 'pdf'){
+            //convert to pdf 
+          }else if(outputFormat === 'mobi'){
+            //convert to mobi
+          }else if(outputFormat === 'epub'){
+            //just download the epub file
+          }
+        }
+    </script>
+  </body>
+</html>
